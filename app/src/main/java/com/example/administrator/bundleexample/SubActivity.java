@@ -9,9 +9,8 @@ import java.util.ArrayList;
 import java.util.Vector;
 
 public class SubActivity extends AppCompatActivity {
-
     private TextView subActivityTextView;
-//
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +19,11 @@ public class SubActivity extends AppCompatActivity {
         subActivityTextView = (TextView)findViewById(R.id.subActivityTextView);
 
         Bundle bundle = getIntent().getExtras();
-        ArrayList<String> getDatas = new ArrayList<>();
-        getDatas = bundle.getStringArrayList("bundleKey");
+        ArrayList<String> getDatas;
 
+        getDatas = bundle.getStringArrayList("ArrayListKey");
         String getStringData = bundle.getString("stringKey");
+
         Log.i("getDatas", String.valueOf(getDatas));
         Log.i("getStringData", getStringData);
 //        String arrayListValue0 = getDatas.get(0);
